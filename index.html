@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mockup Website — PT Cakra Proteksi Indonesia</title>
+  <meta name="description" content="Pilihan 5 mockup website company profile PT Cakra Proteksi Indonesia.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#052E57">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/cpi-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600&family=Instrument+Sans:wght@600&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <style>
+    :root { --bg: #F4F7FB; --ink: #0D1B2E; --muted: #56667C; --line: #E2E9F1; }
+    body { font-family: "Plus Jakarta Sans", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+    .wrap { width: min(1240px, 100% - 48px); margin-inline: auto; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 26px 0; }
+    .logo { font-size: 15px; color: var(--ink); }
+    .lang { display: inline-flex; padding: 4px; border-radius: 999px; background: #fff; border: 1px solid var(--line); }
+    .lang button { min-width: 44px; min-height: 36px; border-radius: 999px; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; color: var(--muted); transition: background-color .3s, color .3s; }
+    .lang button.is-active { background: var(--navy); color: #fff; }
+    .intro { padding: clamp(30px, 6vw, 70px) 0 clamp(30px, 5vw, 56px); max-width: 780px; }
+    .eyebrow { display: inline-flex; gap: 10px; align-items: center; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #E36A00; margin-bottom: 16px; }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: currentColor; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.06; letter-spacing: -.035em; font-weight: 800; color: var(--navy); margin-bottom: 18px; text-wrap: balance; }
+    .intro p { font-size: 1.1rem; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-bottom: 80px; }
+    .card { display: flex; flex-direction: column; background: #fff; border-radius: 24px; border: 1px solid var(--line); overflow: hidden; transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 40px 80px -30px rgba(5, 46, 87, .35); }
+    .shot { position: relative; aspect-ratio: 4 / 3.2; overflow: hidden; }
+    .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+    .card:hover .shot img { transform: scale(1.06); }
+    .shot__ui { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 16px 18px; }
+    .shot__bar { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 10px; font-size: 10px; font-weight: 700; }
+    .shot__bar i { display: inline-block; width: 22px; height: 14px; margin-right: 6px; vertical-align: middle; }
+    .shot__title { font-size: 26px; line-height: 1.05; letter-spacing: -.03em; max-width: 13ch; }
+    .s1 .shot img { opacity: .9; } .s1 .shot::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, #fff 30%, rgba(255,255,255,0) 72%); }
+    .s1 .shot__ui { z-index: 1; } .s1 .shot__bar { background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.08); color: var(--navy); }
+    .s1 .shot__title { font-weight: 800; color: var(--navy); }
+    .s2 .shot::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,15,30,.4), rgba(5,15,30,.92)); }
+    .s2 .shot__ui { z-index: 1; } .s2 .shot__bar { background: rgba(255,255,255,.1); color: #fff; border-radius: 999px; backdrop-filter: blur(8px); }
+    .s2 .shot__title { font-family: "Sora", sans-serif; font-weight: 600; color: #fff; }
+    .s3 .shot { background: #F6F2EC; }
+    .s3 .shot img { top: 52%; height: 48%; left: 18px; right: 18px; width: calc(100% - 36px); border-radius: 10px; }
+    .s3 .shot__bar { color: var(--ink); border-bottom: 1px solid rgba(14,32,54,.15); border-radius: 0; padding-inline: 0; }
+    .s3 .shot__title { font-family: "Fraunces", serif; font-weight: 400; color: var(--ink); margin-bottom: auto; margin-top: 14px; }
+    .s3 .shot__title em { color: #D9660A; }
+    .s4 .shot { background: #fff; }
+    .s4 .shot img { left: auto; right: 18px; top: 40px; width: 46%; height: auto; aspect-ratio: .866; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+    .s4 .shot__bar { color: #0A1A2B; border-bottom: 1px solid #DCE3EA; border-radius: 0; padding-inline: 0; }
+    .s4 .shot__title { font-family: "Instrument Sans", sans-serif; font-weight: 600; color: #0A1A2B; max-width: 9ch; margin-bottom: auto; margin-top: 16px; }
+    .s5 .shot { background: #F5F1EA; }
+    .s5 .shot img { left: 46%; width: 54%; }
+    .s5 .shot__ui { right: 54%; }
+    .s5 .shot__bar { color: #15202D; padding-inline: 0; }
+    .s5 .shot__title { font-family: "Cormorant Garamond", serif; font-weight: 500; font-size: 28px; color: #15202D; margin-bottom: auto; margin-top: 18px; }
+    .s5 .shot__title em { color: #7A5B26; }
+    .tag { font-size: 9px; padding: 4px 8px; border-radius: 999px; background: var(--orange); color: #1a0c00; }
+    .body { display: flex; flex-direction: column; gap: 12px; padding: 26px 26px 28px; flex: 1; }
+    .num { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; color: #E36A00; }
+    .body h2 { font-size: 1.5rem; letter-spacing: -.02em; color: var(--navy); line-height: 1.2; }
+    .body p { color: var(--muted); font-size: 15px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chips span { font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: var(--bg); color: var(--muted); }
+    .swatches { display: flex; gap: 6px; }
+    .swatches i { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line); }
+    .go { margin-top: auto; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; border-radius: 999px; background: var(--blue); color: #fff; font-weight: 700; transition: background-color .3s, color .3s; }
+    .card:hover .go { background: var(--orange); color: #1a0c00; }
+    .go .ic { transition: transform .4s var(--ease); }
+    .card:hover .go .ic { transform: translateX(4px); }
+    footer { padding: 26px 0 40px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+    @media (min-width: 1001px) { .grid { grid-template-columns: repeat(6, 1fr); } .grid > .card { grid-column: span 2; } .grid > .card:nth-child(n+4) { grid-column: span 3; } .grid > .card:nth-child(n+4) .shot { aspect-ratio: 16 / 9; } }
+    @media (max-width: 1000px) { .grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } .wrap { width: calc(100% - 32px); } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="logo" id="logo"></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-l="id">ID</button><button type="button" data-l="en">EN</button>
+      </div>
+    </header>
+
+    <section class="intro">
+      <span class="eyebrow" data-t="eyebrow"></span>
+      <h1 data-t="title"></h1>
+      <p data-t="lead"></p>
+    </section>
+
+    <section class="grid" id="grid"></section>
+  </div>
+  <footer><div class="wrap" data-t="foot"></div></footer>
+
+  <script>
+  (function () {
+    const T = {
+      eyebrow: { id: "Presentasi Mockup Website", en: "Website Mockup Presentation" },
+      title: { id: "Lima arah desain untuk PT Cakra Proteksi Indonesia.", en: "Five design directions for PT Cakra Proteksi Indonesia." },
+      lead: { id: "Setiap mockup memiliki menu Beranda, Tentang Perusahaan, Struktur Organisasi, Event, Produk, dan Berita — lengkap dengan animasi halus serta pilihan Bahasa Indonesia & English.", en: "Each mockup includes Home, About Us, Organization, Events, Products, and News — with smooth animations and an Indonesian & English language switch." },
+      open: { id: "Buka Mockup", en: "Open Mockup" },
+      foot: { id: "© 2026 PT Cakra Proteksi Indonesia — Mockup untuk keperluan presentasi. Konten Event & Berita merupakan contoh.", en: "© 2026 PT Cakra Proteksi Indonesia — Mockup for presentation purposes. Event & News content is sample content." }
+    };
+    const M = [
+      { href: "mockup-1/", cls: "s1", img: "board-discussion.jpg", num: "01",
+        name: { id: "Corporate Clarity", en: "Corporate Clarity" },
+        title: { id: "Perlindungan yang tepat untuk keluarga & bisnis.", en: "The right protection for families & businesses." },
+        desc: { id: "Terang, bersih, dan sangat korporat. Navy dominan dengan aksen oranye, cocok untuk kesan terpercaya dan formal.", en: "Bright, clean, and corporate. Navy-led with orange accents for a trustworthy, formal impression." },
+        chips: [{ id: "Tema terang", en: "Light theme" }, { id: "Reveal & counter", en: "Reveal & counters" }, { id: "Kartu melayang", en: "Floating cards" }],
+        sw: ["#052E57", "#054D8A", "#FF7A00", "#F4F7FB"] },
+      { href: "mockup-2/", cls: "s2", img: "team-boardroom.jpg", num: "02",
+        name: { id: "Midnight Premium", en: "Midnight Premium" },
+        title: { id: "Melindungi masa depan, menguatkan kepercayaan.", en: "Protecting the future, strengthening trust." },
+        desc: { id: "Gelap, mewah, dan sinematik. Glassmorphism, transisi tirai antar halaman, preloader logo, dan kursor kustom.", en: "Dark, luxurious, and cinematic. Glassmorphism, curtain page transitions, logo preloader, and a custom cursor." },
+        chips: [{ id: "Tema gelap", en: "Dark theme" }, { id: "Sticky stack", en: "Sticky stack" }, { id: "Transisi tirai", en: "Curtain transition" }],
+        sw: ["#050F1E", "#0A1A30", "#FF7A00", "#3D8BDB"] },
+      { href: "mockup-3/", cls: "s3", img: "family-sunset.jpg", num: "03",
+        name: { id: "Editorial Warm", en: "Editorial Warm" },
+        title: { id: "Perlindungan yang <em>tepat</em> untuk keluarga.", en: "The <em>right</em> protection for families." },
+        desc: { id: "Gaya majalah premium yang hangat. Tipografi serif elegan, gambar membesar saat scroll, carousel dan accordion.", en: "A warm premium-magazine style. Elegant serif typography, scroll-zoom imagery, carousel and accordion." },
+        chips: [{ id: "Tema krem", en: "Cream theme" }, { id: "Tipografi serif", en: "Serif typography" }, { id: "Scroll zoom", en: "Scroll zoom" }],
+        sw: ["#F6F2EC", "#0E2036", "#D9660A", "#FF7A00"] },
+      { href: "mockup-4/", cls: "s4", img: "real/team-office.jpg", num: "04",
+        name: { id: "Hexa Grid", en: "Hexa Grid" },
+        title: { id: "Perlindungan yang tepat untuk keluarga & bisnis.", en: "The right protection for families & businesses." },
+        desc: { id: "Putih bersih dengan grid ala Swiss. Foto asli terbuka dari bingkai heksagon logo CPI, judul muncul per kata, angka menghitung, dan marquee klien.", en: "Clean white Swiss grid. Real photos open from CPI-logo hexagons, headlines rise word by word, counters, and a client marquee." },
+        chips: [{ id: "Heksagon reveal", en: "Hexagon reveal" }, { id: "Split-text & counter", en: "Split-text & counters" }, { id: "Preloader logo", en: "Logo preloader" }],
+        sw: ["#FFFFFF", "#054D8A", "#032C52", "#FF7A00"] },
+      // { href: "mockup-5/", cls: "s5", img: "real/edward-office.jpg", num: "05",
+      //   name: { id: "Private Office", en: "Private Office" },
+      //   title: { id: "Melindungi masa depan, <em>menguatkan</em> kepercayaan.", en: "Protecting the future, <em>strengthening</em> trust." },
+      //   desc: { id: "Menu samping dengan gading, walnut, dan kuningan dari ruang direksi CPI. Preloader tirai, kursor kustom, tab produk crossfade, dan judul serif yang muncul per kata.", en: "Side menu in ivory, walnut, and brass from the CPI boardroom. Curtain preloader, custom cursor, crossfading product tabs, and serif headlines rising word by word." },
+      //   chips: [{ id: "Menu samping", en: "Side menu" }, { id: "Kursor kustom", en: "Custom cursor" }, { id: "Tab crossfade", en: "Crossfade tabs" }],
+      //   sw: ["#F5F1EA", "#2A1C13", "#B08A48", "#15202D"] }
+    ];
+    const ICON = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>';
+    const MARK = '<svg class="mark" viewBox="455 112 770 482" fill="none" stroke-width="70"><path stroke="#FF7A00" d="M793.6 229.3 L665 155 L493.5 254 L493.5 452 L665 551 L836.5 452"/><path stroke="#054D8A" d="M843.5 591 L843.5 254 L1015 155 L1186.5 254 L1186.5 452 L1015 551 L925 499"/></svg>';
+    let lang = "id";
+    try { lang = localStorage.getItem("cpi-lang") || "id"; } catch (e) {}
+    const tr = (o) => o[lang] || o.id;
+    document.getElementById("logo").innerHTML = '<span class="logo">' + MARK + '<span class="logo-text"><b>PT CAKRA PROTEKSI</b><small>INDONESIA</small></span></span>';
+    function render() {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-t]").forEach((el) => (el.textContent = tr(T[el.dataset.t])));
+      document.querySelectorAll("[data-l]").forEach((b) => b.classList.toggle("is-active", b.dataset.l === lang));
+      document.getElementById("grid").innerHTML = M.map((m) => `
+        <a class="card ${m.cls}" href="${m.href}">
+          <div class="shot">
+            <img src="assets/img/${m.img}" alt="">
+            <div class="shot__ui">
+              <div class="shot__bar"><span><i>${MARK}</i>CPI</span><span class="tag">${lang.toUpperCase()}</span></div>
+              <div class="shot__title">${tr(m.title)}</div>
+            </div>
+          </div>
+          <div class="body">
+            <span class="num">MOCKUP ${m.num}</span>
+            <h2>${tr(m.name)}</h2>
+            <p>${tr(m.desc)}</p>
+            <div class="chips">${m.chips.map((c) => `<span>${tr(c)}</span>`).join("")}</div>
+            <div class="swatches" aria-hidden="true">${m.sw.map((c) => `<i style="background:${c}"></i>`).join("")}</div>
+            <span class="go">${tr(T.open)} ${ICON}</span>
+          </div>
+        </a>`).join("");
+    }
+    document.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-l]");
+      if (!b) return;
+      lang = b.dataset.l;
+      try { localStorage.setItem("cpi-lang", lang); } catch (err) {}
+      render();
+    });
+    render();
+  })();
+  </script>
+</body>
+</html>
